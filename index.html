@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Outfit.Lupica</h1>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h2>Outfit Keren Harga Pelajar</h2>
+            <p>Temukan style terbaikmu di sini</p>
+            <button onclick="scrollToProduk()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section class="produk" id="produk">
+        <h2>Produk Kami</h2>
+        <div class="produk-container">
+
+            <!-- Semua pakai bg.jpeg -->
+            <div class="card" onclick="openProduk(
+                'Denim Pants',
+                'Rp 99.000',
+                'img/denim.jpg',
+                'Celana denim stylish dengan bahan nyaman dan cocok digunakan untuk aktivitas sehari-hari.'
+            )">
+                <img src="img/denim.jpg" alt="Denim Pants">
+                <h3>Denim Pants</h3>
+                <p>Rp 99.000</p>
+            </div>
+
+            <div class="card" onclick="openProduk(
+                'Hoodie Oversize',
+                'Rp 120.000',
+                'img/hoddie.jpg',
+                'Hoodie oversize dengan desain modern, hangat dipakai, dan cocok untuk gaya santai.'
+            )">
+                <img src="img/hoddie.jpg" alt="Hoodie Oversize">
+                <h3>Hoodie Oversize</h3>
+                <p>Rp 120.000</p>
+            </div>
+
+            <div class="card" onclick="openProduk(
+                'Jaket Windbreaker',
+                'Rp 110.000',
+                'img/jaket.jpg',
+                'Jaket ringan yang cocok dipakai saat berkendara atau aktivitas outdoor dengan tampilan sporty.'
+            )">
+                <img src="img/jaket.jpg" alt="Jaket Windbreaker">
+                <h3>Jaket Windbreaker</h3>
+                <p>Rp 110.000</p>
+            </div>
+
+            <div class="card" onclick="openProduk(
+                'Kaos Polos Premium',
+                'Rp 75.000',
+                'img/kaos.jpg',
+                'Kaos polos berbahan premium yang lembut, adem, dan cocok dipadukan dengan berbagai outfit.'
+            )">
+                <img src="img/kaos.jpg" alt="Kaos Polos Premium">
+                <h3>Kaos Polos Premium</h3>
+                <p>Rp 75.000</p>
+            </div>
+
+            <div class="card" onclick="openProduk(
+                'Celana Cargo',
+                'Rp 105.000',
+                'img/cargo.jpg',
+                'Celana cargo kekinian dengan banyak kantong, nyaman dipakai, dan cocok untuk style casual.'
+            )">
+                <img src="img/cargo.jpg" alt="Celana Cargo">
+                <h3>Celana Cargo</h3>
+                <p>Rp 105.000</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>Tentang Kami</h2>
+        <p>
+            Kami menyediakan outfit keren dengan harga ramah pelajar dan kualitas terbaik.
+            Outfit.Lupica hadir untuk membantu kamu tampil stylish, nyaman, dan percaya diri setiap hari.
+        </p>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>Hubungi kami untuk pemesanan dan informasi lebih lanjut.</p>
+
+        <div class="contact-container">
+            <div class="contact-item">
+                <h3>WhatsApp</h3>
+                <p>
+                    <a href="https://wa.me/6281399180290" target="_blank">0813-9918-0290</a>
+                </p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Instagram</h3>
+                <p>
+                    <a href="https://instagram.com/outfit.lupica" target="_blank">@outfit.lupica</a>
+                </p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:242410101027@mail.unej.ac.id">242410101027@mail.unej.ac.id</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup -->
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+
+            <img id="popup-img" src="" alt="">
+            <h3 id="popup-title"></h3>
+            <p id="popup-price"></p>
+            <p id="popup-desc"></p>
+
+            <!-- Tombol Shop -->
+            <a id="popup-btn" href="#" target="_blank">Beli Sekarang</a>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Outfit.Lupica. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
