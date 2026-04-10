@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outfit Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <h1 class="logo">Outfit.Lupica</h1>
+            <h1 class="logo">Outfit.<span>Lupica</span></h1>
 
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -26,24 +29,31 @@
 
     <!-- Hero -->
     <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+
         <div class="hero-text">
-            <h2>Outfit Keren Harga Pelajar</h2>
-            <p>Temukan style terbaikmu di sini</p>
-            <button onclick="scrollToProduk()">Shop Now</button>
+            <p class="hero-subtitle">New Collection 2026</p>
+            <h2>Style Simpel, Look Maksimal</h2>
+            <p>Temukan outfit harian yang nyaman, trendi, dan tetap ramah di kantong.</p>
+                        <div class="hero-buttons">
+                <button onclick="scrollToProduk()">Shop Now</button>
+                <a href="#about" class="btn-secondary">Explore More</a>
+            </div>
         </div>
     </section>
 
     <!-- Produk -->
     <section class="produk" id="produk">
         <h2>Produk Kami</h2>
+        <input type="text" id="searchInput" placeholder="Cari produk...">
         <div class="produk-container">
 
-            <!-- Semua pakai bg.jpeg -->
             <div class="card" onclick="openProduk(
                 'Denim Pants',
                 'Rp 99.000',
                 'img/denim.jpg',
-                'Celana denim stylish dengan bahan nyaman dan cocok digunakan untuk aktivitas sehari-hari.'
+                'Celana denim stylish dengan bahan nyaman dan cocok digunakan untuk aktivitas sehari-hari.',
+                'https://wa.me/6281399180290?text=Saya%20ingin%20beli%20Denim%20Pants'
             )">
                 <img src="img/denim.jpg" alt="Denim Pants">
                 <h3>Denim Pants</h3>
@@ -54,7 +64,8 @@
                 'Hoodie Oversize',
                 'Rp 120.000',
                 'img/hoddie.jpg',
-                'Hoodie oversize dengan desain modern, hangat dipakai, dan cocok untuk gaya santai.'
+                'Hoodie oversize dengan desain modern, hangat dipakai, dan cocok untuk gaya santai.',
+                'https://wa.me/6281399180290?text=Saya%20ingin%20beli%20Hoodie%20Oversize'
             )">
                 <img src="img/hoddie.jpg" alt="Hoodie Oversize">
                 <h3>Hoodie Oversize</h3>
@@ -64,10 +75,11 @@
             <div class="card" onclick="openProduk(
                 'Jaket Windbreaker',
                 'Rp 110.000',
-                'img/jaket.jpg',
-                'Jaket ringan yang cocok dipakai saat berkendara atau aktivitas outdoor dengan tampilan sporty.'
+                'img/kaos.jpg',
+                'Jaket ringan yang cocok dipakai saat berkendara atau aktivitas outdoor dengan tampilan sporty.',
+                'https://wa.me/6281399180290?text=Saya%20ingin%20beli%20Jaket%20Windbreaker'
             )">
-                <img src="img/jaket.jpg" alt="Jaket Windbreaker">
+                <img src="img/kaos.jpg" alt="Jaket Windbreaker">
                 <h3>Jaket Windbreaker</h3>
                 <p>Rp 110.000</p>
             </div>
@@ -75,10 +87,11 @@
             <div class="card" onclick="openProduk(
                 'Kaos Polos Premium',
                 'Rp 75.000',
-                'img/kaos.jpg',
-                'Kaos polos berbahan premium yang lembut, adem, dan cocok dipadukan dengan berbagai outfit.'
+                'img/jaket.jpg',
+                'Kaos polos berbahan premium yang lembut, adem, dan cocok dipadukan dengan berbagai outfit.',
+                'https://wa.me/6281399180290?text=Saya%20ingin%20beli%20Kaos%20Polos%20Premium'
             )">
-                <img src="img/kaos.jpg" alt="Kaos Polos Premium">
+                <img src="img/jaket.jpg" alt="Kaos Polos Premium">
                 <h3>Kaos Polos Premium</h3>
                 <p>Rp 75.000</p>
             </div>
@@ -87,7 +100,8 @@
                 'Celana Cargo',
                 'Rp 105.000',
                 'img/cargo.jpg',
-                'Celana cargo kekinian dengan banyak kantong, nyaman dipakai, dan cocok untuk style casual.'
+                'Celana cargo kekinian dengan banyak kantong, nyaman dipakai, dan cocok untuk style casual.',
+                'https://wa.me/6281399180290?text=Saya%20ingin%20beli%20Celana%20Cargo'
             )">
                 <img src="img/cargo.jpg" alt="Celana Cargo">
                 <h3>Celana Cargo</h3>
@@ -99,44 +113,61 @@
 
     <!-- About -->
     <section class="about" id="about">
-        <h2>Tentang Kami</h2>
-        <p>
-            Kami menyediakan outfit keren dengan harga ramah pelajar dan kualitas terbaik.
-            Outfit.Lupica hadir untuk membantu kamu tampil stylish, nyaman, dan percaya diri setiap hari.
-        </p>
+        <div class="about-content">
+            <h2>Tentang Kami</h2>
+            <p class="about-desc">
+                Outfit.Lupica hadir untuk membantu kamu tampil stylish, nyaman, dan percaya diri
+                setiap hari. Kami menyediakan outfit keren dengan harga ramah pelajar, desain kekinian,
+                dan kualitas yang tetap nyaman dipakai untuk aktivitas harian.
+            </p>
+
+            <div class="about-features">
+                <div class="about-card">
+                    <h3>Harga Terjangkau</h3>
+                    <p>Cocok untuk pelajar dengan budget ramah tanpa mengurangi gaya.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Style Kekinian</h3>
+                    <p>Koleksi outfit simple, modern, dan mudah dipadukan untuk daily wear.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Nyaman Dipakai</h3>
+                    <p>Mengutamakan bahan yang nyaman untuk dipakai di berbagai aktivitas.</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="about-btn">Hubungi Kami</a>
+        </div>
     </section>
 
-
+    <!-- Contact -->
     <section class="contact" id="contact">
-        <h2>Contact</h2>
-        <p>Hubungi kami untuk pemesanan dan informasi lebih lanjut.</p>
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <p>Hubungi kami untuk pemesanan dan informasi lebih lanjut.</p>
 
-        <div class="contact-container">
-            <div class="contact-item">
-                <h3>WhatsApp</h3>
-                <p>
-                    <a href="https://wa.me/6281399180290" target="_blank">0813-9918-0290</a>
-                </p>
-            </div>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <h3>📱 WhatsApp</h3>
+                    <p><a href="https://wa.me/6281399180290" target="_blank">0813-9918-0290</a></p>
+                </div>
 
-            <div class="contact-item">
-                <h3>Instagram</h3>
-                <p>
-                    <a href="https://instagram.com/outfit.lupica" target="_blank">@outfit.lupica</a>
-                </p>
-            </div>
+                <div class="contact-item">
+                    <h3>📸 Instagram</h3>
+                    <p><a href="https://instagram.com/outfit.lupica" target="_blank">@outfit.lupica</a></p>
+                </div>
 
-            <div class="contact-item">
-                <h3>Email</h3>
-                <p>
-                    <a href="mailto:242410101027@mail.unej.ac.id">242410101027@mail.unej.ac.id</a>
-                </p>
+                <div class="contact-item">
+                    <h3>✉️ Email</h3>
+                    <p><a href="mailto:242410101027@mail.unej.ac.id">242410101027@mail.unej.ac.id</a></p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Popup -->
-
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
@@ -146,9 +177,7 @@
             <p id="popup-price"></p>
             <p id="popup-desc"></p>
 
-            <!-- Tombol Shop -->
             <a id="popup-btn" href="#" target="_blank">Beli Sekarang</a>
-
         </div>
     </div>
 
@@ -156,6 +185,7 @@
     <footer>
         <p>© 2026 Outfit.Lupica. All rights reserved.</p>
     </footer>
+    
 
     <script src="script.js"></script>
 </body>
