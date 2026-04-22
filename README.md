@@ -3,7 +3,7 @@
 Website katalog outfit sederhana dengan tampilan modern, aesthetic, dan responsive.
 
 🔗 **Live Demo:**
-https://fhiiieee.github.io/OutfitLupica.github.io/
+https://fhiieee.github.io/OutfitLupica.github.io/
 
 ---
 
